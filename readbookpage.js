@@ -16,3 +16,16 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
    //End code
    });});}
 getData();
+
+function addroom()
+{
+  room_names = document.getElementById("room_name").value;
+  firebase.database().ref("/").child(Room_names).update({
+    purpose : "adding user"
+  });
+}
+
+function logout()
+{
+window.location=("index.html")
+}
